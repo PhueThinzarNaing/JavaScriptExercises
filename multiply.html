@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <script>
+         function multiply()
+         {
+             var mnum=document.getElementById('num').value;
+             for(var i=1;i<=12;i++)
+             {
+                 document.getElementById('multi').innerHTML+=mnum +"*" + i + "=" + mnum*i+'<br>';
+             }
+         }
+         function clearData()
+         {  document.getElementById('num').value=" ";
+             document.getElementById('multi').innerHTML=" ";
+         }
+     </script>
+    </head>
+    <body>
+        <label>Enter number</label>
+        <input type="text" id="num">
+        <button onclick="multiply()">Multiply</button>   
+        <button onclick="clearData()">Reset</button><br>
+        <label id="multi"></label>
+    </body>
+</html>
