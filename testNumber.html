@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           function check(){
+               var num=document.getElementById('num').value;
+               if(num%2==0)
+               {
+                   document.getElementById('lblresult').innerHTML=num +  'is an even number';
+               }
+               else{
+                   document.getElementById('lblresult').innerHTML=num + 'is an odd number';
+
+               }
+           }
+           function DataClear(){
+               document.getElementById("num").value=" ";
+               document.getElementById("lblresult").innerHTML=" ";
+           }
+
+           
+               
+        </script>
+    </head>
+    <body>
+      <label id="lbl1">Enter Number</label>
+      <input type="text" id="num"><br>
+      <h2 id="lblresult"></h2>
+      <button onclick="check()">check</button>
+      <button onclick="DataClear()">Reset</button>
+     
+    </body>
+</html>
