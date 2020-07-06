@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function age(){
+                var date=document.getElementById('age').value;
+                var date1=new Date(date);
+                var year1=date1.getFullYear();
+
+                var current_date=new Date();
+                var year2=current_date.getFullYear();
+                  var year=year2-year1;
+               if(year>18)
+                {
+                    alert("Your age is over 18");
+                }
+                else{
+                    alert("Your age is under 18");
+                }
+
+               
+               
+            }
+        </script>
+    </head>
+    <body>
+       <label id="lbl">Age:</label> 
+       <input type="date" id="age">
+       <button type="button" onclick="age()">Check age</button>
+      
+    </body>
+</html>
