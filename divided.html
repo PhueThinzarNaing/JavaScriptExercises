@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Divided when 2 and 5 between 1 to 100</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 0; i < 100; i++) {
+  if(i%2==0 && i%5==0)
+   text += i+"<br>";
+ 
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
