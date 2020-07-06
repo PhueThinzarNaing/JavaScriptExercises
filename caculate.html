@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function addNum(){
+             var num1=document.getElementById("num1").value;
+             var num2=document.getElementById("num2").value;
+             var result=parseInt(num1)+parseInt(num2);
+             document.getElementById("addResult").innerHTML=result;
+         }
+         function subNum(){
+             var num1=document.getElementById("num1").value;
+             var num2=document.getElementById("num2").value;
+             var result=parseInt(num1)-parseInt(num2);
+             document.getElementById("addResult").innerHTML=result;
+         }
+         function multiNum(){
+             var num1=document.getElementById("num1").value;
+             var num2=document.getElementById("num2").value;
+             var result=parseInt(num1)*parseInt(num2);
+             document.getElementById("addResult").innerHTML=result;
+         }
+         function divNum(){
+             var num1=document.getElementById("num1").value;
+             var num2=document.getElementById("num2").value;
+             var result=parseInt(num1)/parseInt(num2);
+             document.getElementById("addResult").innerHTML=result;
+         }
+         function DataClear(){
+           document.getElementById("num1").value=" ";
+           document.getElementById("num2").value=" ";
+           document.getElementById("addResult").innerHTML=" ";
+         }
+        </script>
+    </head>
+    <body>
+      <label>Number1:</label>  
+      <input type="text" id="num1"><br>
+      <label>Number2:</label>
+      <input type="text" id="num2">
+      <h3 id="addResult"></h3>
+      <button onclick="addNum()">+</button>
+      <button onclick="subNum()">-</button>
+      <button onclick="multiNum()">*</button>
+      <button onclick="divNum()">/</button>
+      <button onclick="DataClear()">Reset</button>
+      
+    </body>
+</html>
