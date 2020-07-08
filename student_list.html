@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input[type=text]{
+                width:300px;
+                height:30px;
+            }
+            .c1{
+                float: left;
+            }
+            .c1::after{
+               content:"";
+               display: table;
+               clear:both;
+            }
+            
+            input[type=chekbox]{
+                width:100px;
+                height: 100px;
+            }
+            .row{
+               background-color: #cccccc;
+               width:700px;
+               height: 300px;
+               padding:20px;
+               margin:30px;
+               
+            }
+            .c2{
+                float:right;
+            }
+            #btn{
+                border-radius: 50px;
+                width:130px;
+                height:50px;
+                margin-right: 100px;
+            }
+            #ta1{
+                border-collapse: collapse;
+                width:70%;
+            }
+            table,td,th{
+                border: 1px solid #ddd;
+                text-align: center;
+            }
+            th,td{
+                padding:10px;
+            }
+        </style>
+        <script>
+            function Save(){
+            var name=document.getElementById("name").value;
+            var phone=document.getElementById("phone").value;
+            var email=document.getElementById("email").value;
+            var address=document.getElementById("address").value;
+
+            var checkedValue="";
+            var sub=document.getElementsByClassName('subject');
+            for(var i=0; i<sub.length; i++){
+                if(sub[i].checked){
+                    checkedValue+=sub[i].value+",";
+
+                }
+            }
+            var getRadio="";
+            var rdo = document.getElementsByName('genders'); 
+            for(i = 0; i < rdo.length; i++) { 
+               if(rdo[i].checked) 
+                 getRadio=rdo[i].value; 
+             } 
+             var tb=document.getElementById("ta1");
+              var row=document.createElement("tr");
+             tb.appendChild(row);
+        
+              var item1=document.createElement("td");
+              var value1=document.createTextNode(name);
+              item1.appendChild(value1);
+              row.appendChild(item1);
+        
+              var item2=document.createElement("td");
+              var value2=document.createTextNode(phone);
+              item2.appendChild(value2);
+              row.appendChild(item2);
+        
+              var item3=document.createElement("td");
+              var value3=document.createTextNode(email);
+              item3.appendChild(value3);
+              row.appendChild(item3);
+        
+             
+        
+              var item4=document.createElement("td");
+              var value4=document.createTextNode(address);
+              item4.appendChild(value4);
+              row.appendChild(item4);
+        
+              var item5=document.createElement("td");
+              var value5=document.createTextNode(getRadio);
+              item5.appendChild(value5);
+              row.appendChild(item5);
+        
+              var item6=document.createElement("td");
+              var value6=document.createTextNode(checkedValue);
+              item6.appendChild(value6);
+              row.appendChild(item6);
+              
+              
+        }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align:left;padding-left:40px">Student List</h1>
+        <div class="row">
+            <div class="c1">
+                <input type="text" id="name" placeholder="Name"><br><br>
+                <input type="text" id="phone" placeholder="Phone"><br><br>
+                <input type="text" id="email" placeholder="Email"><br><br>
+               
+            </div>
+            <div class="c2">
+                <input type="text" id="address" placeholder="Address"><br><br>
+                <input type="radio" id="male" name="genders" value="Male">
+                <label for="male">Male</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="female" name="genders" value="Female">
+                <label for="female">Female</label><br><br>
+                <input type="checkbox" class="subject" name="subject1" value="501">
+                <label for="sub1"> 501</label>&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" class="subject" name="subject2" value="502">
+                <label for="sub2"> 502</label>&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" class="subject" name="subject3" value="503">
+                <label for="sub3">503</label><br><br>
+                <button type="button" id="save" onclick="Save()" style="background-color:green">Save</button>
+            </div>
+            </div>
+            <table id="ta1">
+                  <tr style="background-color: green;">
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>Subjet</th>
+                    
+                  </tr>
+            </table>
+    </body>
+</html>
