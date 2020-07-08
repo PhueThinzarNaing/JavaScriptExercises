@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task List Execises</title>
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <div class="mytask">
+       <label>Task Name:</label>
+        <input type="text" id="task" placeholder="Add Task...">
+        <button onclick="addTask()">Add</button><br>
+      
+        <ul id="mylist" style="list-style-type: none;">
+        </ul>
+    </div>
+ 
+    <script>
+       
+        function addTask() {
+            var inputvalue= document.getElementById("task").value;   
+
+            var mylist = document.getElementById("mylist");
+
+            var li = document.createElement("li");
+            var box=document.createElement("input");
+            box.value=inputvalue;
+            li.appendChild(box);
+            mylist.appendChild(li);
+
+            var btn=document.createElement("button");
+            btn.innerHTML="Remove";
+            li.appendChild(btn);
+
+            btn.addEventListener("click",function()
+           {
+               li.remove();
+
+           } );
+
+            
+            
+
+          
+            
+        }
+    </script>
+</body>
+
+
+
+</html>
